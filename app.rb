@@ -12,11 +12,15 @@ class Battle < Sinatra::Base
     erb :index
   end
 
-  post '/names' do
-    session['names'] = params
-    p session
+  get '/play' do
+    @names = session[:names]
     erb :play
   end
 
-  run! if app_file ==$0
+  post '/names' do
+    session[:names] = params
+    redirect '/play'
+  end
+
+  run! if app_file == $0
 end
