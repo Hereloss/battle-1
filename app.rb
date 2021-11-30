@@ -1,5 +1,5 @@
-require 'sinatra/base'
-require 'sinatra/reloader'
+require "sinatra/base"
+require "sinatra/reloader"
 
 class Battle < Sinatra::Base
   configure :development do
