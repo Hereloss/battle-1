@@ -4,6 +4,6 @@ feature 'hitpoints' do
     fill_in('name1', with: 'Player 1')
     fill_in('name2', with: 'Player 2')
     click_button 'Submit'
-    expect(page).to have_content('Player 1 - 100 HP')
+    expect(page).to have_content('Player 2 - 100 HP')
   end
 end
