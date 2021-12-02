@@ -14,4 +14,8 @@ class Player
   def change_name(name)
     @name = name
   end
+
+  def reset 
+    @hitpoints = 100
+  end
 end

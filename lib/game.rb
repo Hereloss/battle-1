@@ -21,6 +21,14 @@ class Game
     end
   end
 
+  def lost?
+    if @turn == 1
+      return @player_1.hitpoints <= 0
+    else
+      return @player_2.hitpoints <= 0
+    end
+  end
+
   def play
     if @turn == 1
       attack(@player_2)
@@ -29,5 +37,11 @@ class Game
       attack(@player_1)
       switch_turn
     end
+  end
+
+  def reset
+    @player_1.reset
+    @player_2.reset
+    @turn = 1
   end
 end

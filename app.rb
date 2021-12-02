@@ -21,7 +21,14 @@ class Battle < Sinatra::Base
 
   get '/attack' do
     $game.play
+    if $game.lost?
+      redirect '/lose'
+    end
     erb :attack
+  end
+
+  get '/lose' do
+    erb :losing
   end
 
   post '/names' do
