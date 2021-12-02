@@ -14,3 +14,5 @@ group :development, :test do
   gem 'capybara'
   gem 'sinatra-contrib'
 end
+
+gem "webrick", "~> 1.7"
