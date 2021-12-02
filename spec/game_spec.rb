@@ -31,4 +31,12 @@ describe Game do
       expect(subject.turn).to eq 2
     end
   end
+
+  describe "#play" do
+    it "Player receives damage, and turn changes" do
+      expect(subject).to receive(:attack)
+      expect(subject).to receive(:switch_turn)
+      subject.play
+    end
+  end
 end

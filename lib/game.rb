@@ -12,12 +12,22 @@ class Game
   def attack(player)
     player.take_damage
   end
-
+  
   def switch_turn
     if @turn == 1
       @turn = 2
     else
       @turn = 1
+    end
+  end
+
+  def play
+    if @turn == 1
+      attack(@player_2)
+      switch_turn
+    else 
+      attack(@player_1)
+      switch_turn
     end
   end
 end
