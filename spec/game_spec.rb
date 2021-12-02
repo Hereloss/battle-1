@@ -14,4 +14,10 @@ describe Game do
     end
   end
 
+  context "players" do
+    it "creates players" do
+      expect(subject.player_1).to be_a(Player)
+      expect(subject.player_2).to be_a(Player)
+    end
+  end
 end

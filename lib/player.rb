@@ -1,6 +1,6 @@
 class Player
 
-  attr_reader :name, :hitpoints
+  attr_reader :hitpoints, :name
 
   def initialize(name)
     @name = name
@@ -9,5 +9,9 @@ class Player
 
   def take_damage
     @hitpoints -= 10
+  end
+
+  def change_name(name)
+    @name = name
   end
 end

@@ -4,10 +4,15 @@ describe Player do
 
   let (:subject) {Player.new("Player1")}
 
-  describe "#Name" do
+  describe "#name" do
 
     it "Returns its name" do
       expect(subject.name).to eq("Player1")
+    end
+
+    it "can change its name" do
+      subject.change_name("Sherwin")
+      expect(subject.name).to eq("Sherwin")
     end
   end
   
