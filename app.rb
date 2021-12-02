@@ -1,5 +1,7 @@
-require "sinatra/base"
-require "sinatra/reloader"
+# frozen_string_literal: true
+
+require 'sinatra/base'
+require 'sinatra/reloader'
 require_relative './lib/player'
 require_relative './lib/game'
 
@@ -21,9 +23,7 @@ class Battle < Sinatra::Base
 
   get '/attack' do
     $game.play
-    if $game.lost?
-      redirect '/lose'
-    end
+    redirect '/lose' if $game.lost?
     erb :attack
   end
 
@@ -32,11 +32,10 @@ class Battle < Sinatra::Base
   end
 
   post '/names' do
-    $game.player_1.change_name(params["name1"])
-    $game.player_2.change_name(params["name2"])
+    $game.player_1.change_name(params['name1'])
+    $game.player_2.change_name(params['name2'])
     redirect '/play'
   end
 
-
-  run! if app_file == $0
+  run! if app_file == $PROGRAM_NAME
 end

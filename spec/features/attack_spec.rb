@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 feature 'attack' do
   scenario "Player 1 attacks player 2 and gets a notification and reduces player 2's hitpoints" do
     expect($game.player_2).to receive(:rand).and_return(10)

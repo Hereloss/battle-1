@@ -1,5 +1,6 @@
-class Player
+# frozen_string_literal: true
 
+class Player
   attr_reader :hitpoints, :name
 
   def initialize(name)
@@ -15,7 +16,7 @@ class Player
     @name = name
   end
 
-  def reset 
+  def reset
     @hitpoints = 100
   end
 end
