@@ -8,7 +8,7 @@ class Player
   end
 
   def take_damage
-    @hitpoints -= 10
+    @hitpoints -= rand(1..20)
   end
 
   def change_name(name)

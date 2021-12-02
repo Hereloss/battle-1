@@ -22,6 +22,7 @@ describe Player do
     end
 
     it "can reduce hitpoints by 10" do
+      expect(subject).to receive(:rand).and_return(10)
       expect { subject.take_damage }.to change { subject.hitpoints }.by(-10)
     end
   end
