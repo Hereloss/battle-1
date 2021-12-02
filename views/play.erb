@@ -1,10 +1,10 @@
-<h1><%=@names[:name1]%> vs <%=@names[:name2]%></h1>
+<h1><%=@player_name_1%> vs <%=@player_name_2%></h1>
 <div>
-  <%=@names[:name1]%> - <%=@player_1_hp%> HP 
+  <%=@player_name_1%> - <%=@player_1_hp%> HP 
 </div>
 <form action="/attack" method="get">
   <input type="submit" value="Attack!">
 </form>
 <div>
-  <%=@names[:name2]%> - <%=@player_2_hp%> HP
+  <%=@player_name_2%> - <%=@player_2_hp%> HP
 </div>
