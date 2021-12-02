@@ -21,9 +21,4 @@ describe Player do
     end
   end
 
-  describe "#attack" do
-    it "responds to attack" do
-      expect(subject).to respond_to(:attack)
-    end
-  end
 end
