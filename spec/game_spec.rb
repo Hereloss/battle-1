@@ -20,4 +20,15 @@ describe Game do
       expect(subject.player_2).to be_a(Player)
     end
   end
+
+  context "Turns" do
+    it "Knows what turn it is" do
+      expect(subject.turn).to eq 1
+    end
+
+    it "Can switch turn" do
+      subject.switch_turn
+      expect(subject.turn).to eq 2
+    end
+  end
 end
