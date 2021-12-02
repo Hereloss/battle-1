@@ -6,9 +6,24 @@ describe Player do
 
   describe "#Name" do
 
-  it "Returns its name" do
-    expect(subject.name).to eq("Player1")
+    it "Returns its name" do
+      expect(subject.name).to eq("Player1")
+    end
+  end
+  
+  describe "hitpoints" do
+    it "returns hitpoints" do
+      expect(subject.hitpoints).to eq(100)
+    end
+
+    it "can reduce hitpoints by 10" do
+      expect { subject.take_damage }.to change { subject.hitpoints }.by(-10)
+    end
   end
 
+  describe "#attack" do
+    it "responds to attack" do
+      expect(subject).to respond_to(:attack)
+    end
   end
 end
